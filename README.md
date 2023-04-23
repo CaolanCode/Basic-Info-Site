@@ -1,1 +1,4 @@
-# Basic-Info-Site
+# Basic Information Site
+
+## Objective
+- Learn the basics of Node
