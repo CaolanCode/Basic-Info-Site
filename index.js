@@ -1,27 +1,8 @@
-const http = require('http')
-const url = require('url')
-const fs = require('fs')
+const express = require("express")
 
-const page404 = fs.readFileSync('404.html', 'utf-8', (err, data) => {
-  if(err) throw err
-  return data
-})
+const app = express()
+const port = 8080
 
-http.createServer((req, res) => {
-  const q = url.parse(req.url, true)
-  let filename = ""
-  q.pathname === '/' ? filename = "./index.html" : filename = "." +  q.pathname
+app.use(express.static('public'))
 
-  fs.readFile(filename, (err, data) => {
-    if(err) {
-      res.writeHead(404, {"Content-Type": "text/html"})
-      res.write(page404)
-      return res.end()
-    } else {
-      res.writeHead(200, {"Content-Type": "text/html"})
-      res.write(data)
-      return res.end()
-    }
-  })
-
-}).listen(8080)
+app.listen(port, () => console.log(`Server running on ${port}`))

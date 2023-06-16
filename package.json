@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "name": "basic-info-site",
+  "description": "## Objective - Learn the basics of Node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaolanCode/Basic-Info-Site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaolanCode/Basic-Info-Site/issues"
+  },
+  "homepage": "https://github.com/CaolanCode/Basic-Info-Site#readme"
+}
